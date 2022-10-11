@@ -36,11 +36,6 @@
     --dev-outline: 2px solid #20de8b;
 
 
-
-
-
-
-
 }
 
 /* CSS Reset */
@@ -63,12 +58,10 @@ html,body{
 /* /// */
 
 body {
-    background: linear-gradient(-45deg, var(--rain-blue), var(--rain-dark-blue), var(--rain-purple));
+    background: linear-gradient(-45deg, var(--rain-blue), var(--rain-dark-blue));
     background-size: 300% 300%;
     animation: gradient 20s ease infinite;
 }
-
-
 
 .container{
     outline: var(--dev-outline);
@@ -76,7 +69,37 @@ body {
     height: 700px;
     margin: 0 auto;
     margin-top: 100px;
+    min-width: 700px;
+    min-height: 550px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
+
+.leftPane{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.logo{
+    background-color: green;
+    height: 80px;
+}
+
+.todoPane{
+    background-color: red;
+    flex-grow: 1;
+}
+
+.taskViewer{
+    outline: var(--dev-outline);
+    display: grid;
+    grid-column: 2/6;
+    background-color: #00e8fc;
+
+}
+
 
 @media (max-width: 1400px) {
     .container{
@@ -84,9 +107,17 @@ body {
         width: 100%;
         height: 100vh;
         background-color: #7904eb;
+    }
+}
+
+@media (max-width: 1000px) {
+    .leftPane{
+        display: none;
+    }
+    .taskViewer{
+        grid-column-start: 1;
 
     }
-    
 }
 
 
