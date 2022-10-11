@@ -1,3 +1,113 @@
-html{
-    background-color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --light-pink: #ffccff;
+    --light-blue: #ccffff;
+
+    --bright-pink: #ff6ad5;
+    --bright-purple: #c774e8;
+    --bright-blue: #94d0ff;
+
+    --dark-purple: #7a3a9a;
+
+    --warm-green: #20de8b;
+    --warm-yellow: #fede8b;
+    --warm-blue: #9bd4ff;
+
+    --vapor-purple: #110458;
+    --vapor-light-purple: #7904eb;
+    --vapor-pink: #fe76ff;
+    --vapor-hot-pink: #ff00a1;
+    --vapor-red: #ff114f;
+
+    --vapor-blue: #019fde;
+    --vapor-yellow: #ffe685;
+
+    --bg-blue-1: #00e8fc;
+    --bg-blue-2: #02a7e3;
+    --bg-blue-3: #027fd2;
+
+
+    --rain-light-blue: #0bbdc7;
+    --rain-blue: #123e7b;
+    --rain-dark-blue: #091933;
+    --rain-pink: #ea00d9;
+    --rain-purple: #711c91;
+    --dev-outline: 2px solid #20de8b;
+
+
+
+
+
+
+
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+    min-height: 100%;
+}
+
+/* /// */
+
+body {
+    background: linear-gradient(-45deg, var(--rain-blue), var(--rain-dark-blue), var(--rain-purple));
+    background-size: 300% 300%;
+    animation: gradient 20s ease infinite;
+}
+
+
+
+.container{
+    outline: var(--dev-outline);
+    width: 1400px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+@media (max-width: 1400px) {
+    .container{
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #7904eb;
+
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+/* gradient */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
