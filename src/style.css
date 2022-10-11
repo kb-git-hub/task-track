@@ -79,6 +79,7 @@ body {
 .leftPane{
     display: flex;
     flex-direction: column;
+    min-width: 260px;
 
 }
 
@@ -110,7 +111,7 @@ body {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .leftPane{
         display: none;
     }
