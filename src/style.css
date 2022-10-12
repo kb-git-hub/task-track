@@ -41,7 +41,8 @@
     --spacing-md: 15px;
     --spacing-lg: 20px;
     --spacing-xl: 30px;
-    --shadow: #ea00d9 0px 16px 300px;
+    --spacing-btnSpace: 60px;
+    --shadow: #ea00d9 0px 16px 100px;
 
 
 }
@@ -66,6 +67,7 @@ html,body{
 }
 
 .btn {
+    outline: var(--dev-outline);
     padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--border-radius);
     transition: filter 0.15s ease-in-out;
@@ -85,6 +87,7 @@ body {
 }
 
 .container{
+    position: relative;
     outline: var(--dev-outline);
     width: 1400px;
     height: 700px;
@@ -99,10 +102,12 @@ body {
     box-shadow: var(--shadow);
 }
 
+
+/* Left Pane Items */
 .leftPane{
     display: flex;
     flex-direction: column;
-    min-width: 260px;
+    min-width: 270px;
 }
 
 .logo{
@@ -114,16 +119,60 @@ body {
     font-size: 24px;
 }
 
+.logoText{
+    outline: var(--dev-outline);
+    display: flex;
+    gap: var(--spacing-xs);
+}
+.logoLetter{
+    font-weight: 600;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rain-pink);
+    color: var(--rain-dark-blue);
+}
+
+.logoIcon{
+    outline: var(--dev-outline);
+    flex-grow: 1;
+}
+
+
+.logoPad{
+    color: var(--rain-pink);
+    font-size: 34px;
+}
+
 .todoPane{
     background-color: red;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-lg);
-    padding-top: var(--spacing-lg);
-
+    gap: var(--spacing-btnSpace);
+    padding-top: var(--spacing-btnSpace);
 }
+
+.addTaskBtn{
+    position: absolute;
+    font-size: 60px;
+    z-index: 50;
+    color: var(--warm-yellow);
+    left: 180px;
+    bottom: 40px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.addTaskBtn:hover{
+    position: absolute;
+    transform: rotate(180deg) scale(1.2);
+}
+
+
 
 .taskViewer{
     outline: var(--dev-outline);
