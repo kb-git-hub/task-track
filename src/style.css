@@ -35,6 +35,7 @@
     --rain-purple: #711c91;
     --dev-outline: 2px solid #20de8b;
 
+    --border-radius-small: 4px;
     --border-radius: 8px;
     --spacing-xs: 5px;
     --spacing-sm: 10px;
@@ -42,6 +43,7 @@
     --spacing-lg: 20px;
     --spacing-xl: 30px;
     --spacing-btnSpace: 60px;
+    --shadow-small: #ea00d9 1px 1px 8px;
     --shadow: #ea00d9 0px 16px 100px;
 
 
@@ -83,19 +85,17 @@ html,body{
 body {
     background: linear-gradient(-45deg, var(--rain-dark-blue), var(--rain-blue));
     background-size: 300% 300%;
-    animation: gradient 20s ease infinite;
+    animation: gradient 10s ease infinite;
 }
 
 .container{
     position: relative;
-    outline: var(--dev-outline);
     width: 1400px;
     height: 700px;
     margin: 0 auto;
     margin-top: 100px;
     min-width: 700px;
     min-height: 550px;
-
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     border-radius: var(--border-radius);
@@ -108,23 +108,29 @@ body {
     display: flex;
     flex-direction: column;
     min-width: 270px;
+    background-color: var(--rain-dark-blue);
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
 }
 
-.logo{
+.logoBox{
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 600;
-    font-size: 24px;
+    cursor:default;
 }
 
 .logoText{
-    outline: var(--dev-outline);
     display: flex;
+    flex-wrap: wrap;
     gap: var(--spacing-xs);
+    flex-basis: 100%;
+    padding-left: 40px;
 }
+
 .logoLetter{
+    font-size: 24px;
     font-weight: 600;
     height: 25px;
     width: 25px;
@@ -132,22 +138,25 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--rain-pink);
-    color: var(--rain-dark-blue);
+    color: var(--rain-blue);
+    border-radius: var(--border-radius-small);
+    box-shadow: var(--shadow-small);
 }
 
 .logoIcon{
-    outline: var(--dev-outline);
-    flex-grow: 1;
+    padding-top: var(--spacing-sm);
+    padding-right: var(--spacing-xl);
+    
 }
-
 
 .logoPad{
     color: var(--rain-pink);
-    font-size: 34px;
+    font-size: 70px;
 }
 
+
+/* todos */
 .todoPane{
-    background-color: red;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -160,7 +169,7 @@ body {
     position: absolute;
     font-size: 60px;
     z-index: 50;
-    color: var(--warm-yellow);
+    color: var(--rain-light-blue);
     left: 180px;
     bottom: 40px;
     transition: transform 0.3s ease-in-out;
@@ -173,12 +182,46 @@ body {
 }
 
 
+/* Todo buttons */
+.todoBtn{
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    width: 192px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: filter 0.15s ease-in-out;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    background-color: var(--rain-blue);
+}
+
+
+  .todoBtn:hover{
+    scale: 110%;
+  }
+
+.todoLetter{
+    font-size: 24px;
+    font-weight: 600;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rain-light-blue);
+    color: var(--rain-blue);
+    border-radius: var(--border-radius-small);
+    /* box-shadow: var(--shadow-small); */
+}
+
+
+
+
+/* Right Pane */
 
 .taskViewer{
-    outline: var(--dev-outline);
     display: grid;
     grid-column: 2/6;
-    background-color: #00e8fc;
     padding: var(--spacing-xl);
     border-bottom-right-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
@@ -191,7 +234,6 @@ body {
         margin: 0;
         width: 100%;
         height: 100vh;
-        background-color: #7904eb;
     }
 }
 
