@@ -1,50 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 :root {
-    --light-pink: #ffccff;
-    --light-blue: #ccffff;
-
-    --bright-pink: #ff6ad5;
-    --bright-purple: #c774e8;
-    --bright-blue: #94d0ff;
-
-    --dark-purple: #7a3a9a;
-
-    --warm-green: #20de8b;
-    --warm-yellow: #fede8b;
-    --warm-blue: #9bd4ff;
-
     --vapor-purple: #110458;
     --vapor-light-purple: #7904eb;
     --vapor-pink: #fe76ff;
     --vapor-hot-pink: #ff00a1;
     --vapor-red: #ff114f;
 
-    --vapor-blue: #019fde;
-    --vapor-yellow: #ffe685;
-
     --bg-blue-1: #00e8fc;
     --bg-blue-2: #02a7e3;
     --bg-blue-3: #027fd2;
-
 
     --rain-light-blue: #0bbdc7;
     --rain-blue: #123e7b;
     --rain-dark-blue: #091933;
     --rain-pink: #ea00d9;
     --rain-purple: #711c91;
+
+    --smokey: rgb(199, 199, 199);
     --dev-outline: 2px solid #20de8b;
 
     --border-radius-small: 4px;
-    --border-radius: 8px;
+    --border-radius-med: 10px;
+    --border-radius: 30px;
     --spacing-xs: 5px;
     --spacing-sm: 10px;
     --spacing-md: 15px;
     --spacing-lg: 20px;
     --spacing-xl: 30px;
     --spacing-btnSpace: 60px;
-    --shadow-small: #ea00d9 1px 1px 8px;
-    --shadow: #ea00d9 0px 16px 100px;
+    --shadow-small: #0bbdc7 1px 1px 8px;
+    --shadow-med-blue: #0bbdc7 1px 1px 8px;
+    --shadow-med-pink: #ea00d9  1px 1px 8px;
+    --shadow: #091933 0px 16px 100px;
 
 
 }
@@ -83,9 +71,12 @@ html,body{
 /* /// */
 
 body {
-    background: linear-gradient(-45deg, var(--rain-dark-blue), var(--rain-blue));
-    background-size: 300% 300%;
-    animation: gradient 10s ease infinite;
+    /* background: linear-gradient(-45deg,  var(--rain-blue));  */
+     /* background-size: 300% 300%; */
+     /* background-color: var(--rain-light-blue); */
+    /* animation: gradient 10s ease infinite;
+    background-color: rgb(139, 139, 139); */
+    background-color: rgb(54, 54, 54);
 }
 
 .container{
@@ -113,6 +104,9 @@ body {
     border-bottom-left-radius: var(--border-radius);
 }
 
+
+
+/* Logo  */
 .logoBox{
     height: 80px;
     display: flex;
@@ -137,8 +131,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--rain-pink);
-    color: var(--rain-blue);
+    background-color: var(--rain-light-blue);
+    color: var(--sm);
     border-radius: var(--border-radius-small);
     box-shadow: var(--shadow-small);
 }
@@ -150,9 +144,11 @@ body {
 }
 
 .logoPad{
-    color: var(--rain-pink);
+    color: var(--rain-light-blue);
     font-size: 70px;
 }
+
+
 
 
 /* todos */
@@ -169,7 +165,7 @@ body {
     position: absolute;
     font-size: 60px;
     z-index: 50;
-    color: var(--rain-light-blue);
+    color: var(--rain-pink);
     left: 180px;
     bottom: 40px;
     transition: transform 0.3s ease-in-out;
@@ -186,48 +182,53 @@ body {
 .todoBtn{
     display: flex;
     justify-content: center;
-    gap: var(--spacing-xs);
     width: 192px;
+    font-weight: 600;
+    letter-spacing: 2px;
     padding: var(--spacing-sm) var(--spacing-md);
     transition: filter 0.15s ease-in-out;
     cursor: pointer;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-med);
     background-color: var(--rain-blue);
+    color: var(--rain-light-blue);
+    box-shadow: var(--shadow-med-blue);
 }
 
 
-  .todoBtn:hover{
-    scale: 110%;
+.todoBtn:hover, .todoBtn.active{
+    scale: 115%;
+    color: var(--rain-pink);
+    box-shadow: var(--shadow-med-pink);
   }
-
-.todoLetter{
-    font-size: 24px;
-    font-weight: 600;
-    height: 25px;
-    width: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--rain-light-blue);
-    color: var(--rain-blue);
-    border-radius: var(--border-radius-small);
-    /* box-shadow: var(--shadow-small); */
-}
-
 
 
 
 /* Right Pane */
 
 .taskViewer{
-    display: grid;
     grid-column: 2/6;
     padding: var(--spacing-xl);
     border-bottom-right-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
-
+    background-color: var(--rain-dark-blue);
+    /* background-color: var(--smokey); */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
 
 @media (max-width: 1400px) {
     .container{
