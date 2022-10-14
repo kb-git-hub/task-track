@@ -289,9 +289,7 @@ body {
 .taskViewer.projectActive{
     display: flex;
     overflow-x: scroll;
-    
-   
-    
+  
 }
 
 .projectCard{
@@ -305,7 +303,7 @@ body {
 
 
 .projectTitle{
-    height: 80px;
+    min-height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
