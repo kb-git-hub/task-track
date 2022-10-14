@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --vapor-purple: #110458;
+    --vapor-light-purple: #7904eb;
+    --vapor-pink: #fe76ff;
+    --vapor-hot-pink: #ff00a1;
+    --vapor-red: #ff114f;
+
+
+    --rain-blue: #027fd2;
+    --rain-dark-blue: #091933;
+ 
+
+    --black-smoke: rgb(54, 54, 54);
+    --smokey: rgb(199, 199, 199);
+    --dev-outline: 2px solid #20de8b;
+
+    --Priority-high: 8px solid #ff114f;
+    --Priority-low: 8px solid #20de8b;
+
+    --border-radius-small: 4px;
+    --border-radius-med: 10px;
+    --border-radius: 30px;
+    --project-border: 2px solid #027fd2 ;
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
+    --spacing-btnSpace: 60px;
+    --shadow-small: #02070f  2px 2px 12px;
+    --shadow-med: #02070f  3px 6px 12px;
+    --shadow: #091933 0px 16px 100px;
+
+
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* utils */
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+    min-height: 100%;
+}
+
+.btn {
+    outline: var(--dev-outline);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    transition: filter 0.15s ease-in-out;
+    cursor: pointer;
+  }
+
+  .btn:hover{
+    scale: 110%;
+}
+
+
+body {
+    background-color: rgb(54, 54, 54);
+}
+
+.container{
+    position: relative;
+    width: 1400px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 100px;
+    min-width: 700px;
+    min-height: 550px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+
+
+
+
+/* Media Queries */
+
+@media (max-width: 1400px) {
+    .container{
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 1100px) {
+    .leftPane{
+        display: none;
+    }
+    .taskViewer{
+        grid-column-start: 1;
+
+    }
+}
+
+
+
+
+

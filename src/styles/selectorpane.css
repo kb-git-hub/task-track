@@ -1,0 +1,105 @@
+
+/* Left Pane Items */
+.leftPane{
+    display: flex;
+    flex-direction: column;
+    min-width: 270px;
+    background-color: var(--rain-dark-blue);
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+
+
+/* Logo  */
+.logoBox{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:default;
+}
+
+.logoText{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    flex-basis: 100%;
+    padding-left: 40px;
+}
+
+.logoLetter{
+    font-size: 24px;
+    font-weight: 600;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rain-blue);
+    color: var(--rain-dark-blue);
+    border-radius: var(--border-radius-small);
+}
+
+.logoIcon{
+    padding-top: var(--spacing-sm);
+    padding-right: var(--spacing-xl);
+    
+}
+
+.logoPad{
+    color: var(--rain-blue);
+    font-size: 70px;
+}
+
+
+
+
+/* todos */
+.todoPane{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-btnSpace);
+    padding-top: var(--spacing-btnSpace);
+}
+
+.addTaskBtn{
+    position: absolute;
+    font-size: 60px;
+    z-index: 50;
+    color: var(--vapor-red);
+    left: 180px;
+    bottom: 40px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.addTaskBtn:hover{
+    position: absolute;
+    transform: rotate(180deg) scale(1.2);
+}
+
+
+/* Todo buttons */
+.todoBtn{
+    display: flex;
+    justify-content: center;
+    width: 168px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: filter 0.15s ease-in-out;
+    cursor: pointer;
+    border-radius: var(--border-radius-med);
+    background-color: var(--rain-blue);
+    color: var(--rain-dark-blue);
+}
+
+
+.todoBtn:hover, .todoBtn.active{
+    scale: 115%;
+    box-shadow: var(--shadow-med);
+}

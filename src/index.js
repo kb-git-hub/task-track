@@ -1,4 +1,7 @@
-import './style.css'
+import '/src/styles/style.css'
+import '/src/styles/modal.css'
+import '/src/styles/taskpane.css'
+import '/src/styles/selectorpane.css'
 import { compareAsc, format } from 'date-fns'
 import { q, qA, create } from "/src/js/utils";
 import { buildTaskCard, buildProjectCard, buildProjectTasks } from '/src/js/buildCards';

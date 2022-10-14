@@ -1,0 +1,137 @@
+
+
+/* Right Pane */
+.taskViewer{
+    grid-column: 2/6;
+    padding: var(--spacing-xl);
+    border-bottom-right-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    background-color: var(--rain-dark-blue);
+    gap: var(--spacing-md);
+}
+
+
+/* /////////////////// Task Card /////////////////// */
+
+/* Task Viewer Tasks */
+.taskViewer.taskActive{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    min-height: 100px;
+}
+
+.taskCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black-smoke);
+    border-left: var(--Priority-high);
+    padding: 0 var(--spacing-lg);
+    border-radius: var(--border-radius-med);
+    height: 60px;
+    background-color: var(--smokey);
+    font-size: 18px;
+   
+}
+
+.taskContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-lg);
+    /* outline: var(--dev-outline); */
+}
+
+.taskTitle{
+    font-weight: 600;
+    border: none;
+}
+
+.taskDetails{
+    border: none;
+    background-color: var(--rain-dark-blue);
+    color: var(--smokey) ;
+    height: 40px;
+    cursor: pointer;
+}
+
+.taskEdit {
+    border-radius: var(--border-radius-med);
+    border: 2px solid var(--vapor-red);
+    color: var(--rain-dark-blue);
+    cursor: pointer;
+    padding: var(--spacing-sm);
+}
+
+.taskEdit:hover{
+    scale: 105%;
+    box-shadow: var(--shadow-small);
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+#taskCheckbox{
+    accent-color: var(--rain-blue);
+    width: 25px;
+    height: 25px;  
+}
+
+.taskCard:hover{
+    scale: 102%;
+}
+
+
+/*/////////////// project Card ///////////////*/
+
+/* Task Viewer Projects */
+.taskViewer.projectActive{
+    display: flex;
+    overflow-x: scroll;
+  
+}
+
+.projectCard{
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    border: var(--project-border) ;
+    background-color: var(--rain-dark-blue);
+    border-radius: var(--border-radius-med);
+}
+
+
+.projectTitle{
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:default;
+    background-color: var(--rain-blue);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.projectTaskPane{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y:scroll;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-sm);
+}
+
+.projectTasks{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding-left: var(--spacing-md);
+    border-radius: var(--border-radius-small);
+    background-color: var(--smokey);
+    min-height: 40px;
+    border-left: var(--Priority-high)
+}
+
