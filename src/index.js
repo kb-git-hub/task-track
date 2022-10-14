@@ -1,7 +1,7 @@
 import './style.css'
 import { compareAsc, format } from 'date-fns'
 import { q, qA, create } from "/src/js/utils";
-import { buildTaskCard, buildProjectCard, buildProjectTasks } from '/src/js/taskCard';
+import { buildTaskCard, buildProjectCard, buildProjectTasks } from '/src/js/buildCards';
 
 
 
