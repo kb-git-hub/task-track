@@ -22,6 +22,7 @@
     --border-radius-small: 4px;
     --border-radius-med: 10px;
     --border-radius: 30px;
+    --project-border: 2px solid #027fd2 ;
     --spacing-xs: 5px;
     --spacing-sm: 10px;
     --spacing-md: 15px;
@@ -66,9 +67,10 @@ html,body{
     scale: 110%;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-}
+} */
+
 /* /// */
 
 body {
@@ -208,6 +210,7 @@ body {
 }
 
 
+/* /////////////////// Task Card /////////////////// */
 
 /* Task Viewer Tasks */
 .taskViewer.taskActive{
@@ -215,10 +218,8 @@ body {
     flex-direction: column;
     overflow-y: auto;
     min-height: 100px;
-    
 }
 
-/* Task Card */
 .taskCard{
     display: flex;
     justify-content: space-between;
@@ -265,8 +266,6 @@ body {
 .taskEdit:hover{
     scale: 105%;
     box-shadow: var(--shadow-small);
-
-    
 }
 
 .checkbox{
@@ -276,8 +275,7 @@ body {
 #taskCheckbox{
     accent-color: var(--rain-blue);
     width: 25px;
-    height: 25px;
-    
+    height: 25px;  
 }
 
 .taskCard:hover{
@@ -285,9 +283,60 @@ body {
 }
 
 
+/*/////////////// project Card ///////////////*/
+
+/* Task Viewer Projects */
+.taskViewer.projectActive{
+    display: flex;
+    overflow-x: scroll;
+    
+   
+    
+}
+
+.projectCard{
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    border: var(--project-border) ;
+    background-color: var(--rain-dark-blue);
+    border-radius: var(--border-radius);
+}
 
 
+.projectTitle{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:default;
+    background-color: var(--rain-blue);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
 
+.projectTaskPane{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-sm);
+}
+
+.projectTasks{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding-left: var(--spacing-md);
+    border-radius: var(--border-radius-small);
+    background-color: var(--smokey);
+    min-height: 40px;
+    border-left: var(--Priority-high)
+}
 
 
 
