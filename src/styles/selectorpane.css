@@ -68,7 +68,6 @@
 .addTaskBtn{
     position: absolute;
     font-size: 60px;
-    z-index: 50;
     color: var(--vapor-red);
     left: 180px;
     bottom: 40px;
