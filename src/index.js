@@ -5,12 +5,11 @@ import '/src/styles/selectorpane.css'
 import { compareAsc, format } from 'date-fns'
 import { q, qA, create } from "/src/js/utils";
 import { buildTaskCard, buildProjectCard, buildProjectTasks } from '/src/js/buildCards_HTML.js';
-import { interfaceListeners } from './js/interfaceListeners'
+import * as interfaceListeners from './js/interfaceListeners'
 
 
 
 console.log(format(new Date(2014, 1, 11), 'yyyy-MM-dd'))
-interfaceListeners()
 
 
 

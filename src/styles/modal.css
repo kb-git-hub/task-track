@@ -1,4 +1,4 @@
-.overlay {
+#overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,7 +8,7 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.overlay.active {
+#overlay.active {
     display: block;
 }
 
@@ -21,7 +21,8 @@
     left: 50%;
     width: 400px;
     padding: var(--spacing-sm);
-    background-color: var(--rain-blue);
+    background-color: var(--rain-dark-blue);
+    color: var(--rain-blue);
     border-radius: var(--border-radius-med);
     transform: translate(-50%, -50%) scale(0);
     transition: 0.2s ease-in-out;
@@ -47,16 +48,18 @@
     border-radius: var(--border-radius-small);
     width: 80px;
     text-align: center;
-    outline: 2px solid var(--rain-dark-blue);
+    outline: 2px solid var(--rain-blue);
 }
 
 .newType.active {
     background-color: var(--vapor-red);
     outline: 2px solid var(--vapor-red);
+    color: whitesmoke;
 }
 
 .modalPrioritySelector {
     display: flex;
+    align-items: center;
     padding-top: var(--spacing-sm);
     gap: var(--spacing-md);
     font-weight: 600;
@@ -68,13 +71,15 @@
     border-radius: var(--border-radius-small);
     width: 80px;
     text-align: center;
-    outline: 2px solid var(--rain-dark-blue);
+    outline: 2px solid var(--rain-blue);
 }
 
 .modalDetails{
     font-weight: 600;
+    cursor: default;
 }
 .modalDueDate{
+    cursor: default;
     display: flex;
     gap: var(--spacing-md);
     font-weight: 600;

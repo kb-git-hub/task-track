@@ -1,7 +1,7 @@
 export const buildModal = () =>{
     const modal = 
     `
-    <div class="modal active">
+    <div  id='new-item-modal' class="modal active">
         <div class="modalTitle">
             <div>Create new: </div>
             <div class="newType active" id="typeTask">Task</div>
