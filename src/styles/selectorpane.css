@@ -9,8 +9,6 @@
     border-bottom-left-radius: var(--border-radius);
 }
 
-
-
 /* Logo  */
 .logoBox{
     height: 80px;
@@ -43,16 +41,13 @@
 
 .logoIcon{
     padding-top: var(--spacing-sm);
-    padding-right: var(--spacing-xl);
-    
+    padding-right: var(--spacing-xl);   
 }
 
 .logoPad{
     color: var(--rain-blue);
     font-size: 70px;
 }
-
-
 
 
 /* todos */
@@ -65,7 +60,7 @@
     padding-top: var(--spacing-btnSpace);
 }
 
-.addTaskBtn{
+.addItemBtn{
     position: absolute;
     font-size: 60px;
     color: var(--vapor-red);
@@ -75,11 +70,10 @@
     cursor: pointer;
 }
 
-.addTaskBtn:hover{
+.addItemBtn:hover{
     position: absolute;
     transform: rotate(180deg) scale(1.2);
 }
-
 
 /* Todo buttons */
 .todoBtn{
@@ -96,7 +90,6 @@
     background-color: var(--rain-blue);
     color: var(--rain-dark-blue);
 }
-
 
 .todoBtn:hover, .todoBtn.active{
     scale: 115%;
