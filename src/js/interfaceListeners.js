@@ -1,7 +1,6 @@
 import { buildModal } from "./buildModal_HTML";
 import { q, qA, create } from "/src/js/utils";
 
-
 // Initialize interface variables
 const showTasks = q('#show-tasks')
 const showProjects = q('#show-projects')
@@ -10,25 +9,25 @@ const addItemBtn = q('#add-item-btn')
 const modalDiv = q('#modal-div')
 const overlay = q('#overlay')
 
-export function displayTasks() {
+function displayTasks() {
     viewerPane.removeAttribute('class')
     viewerPane.classList.add('taskViewer', 'taskActive')
     console.log(viewerPane);
 }
 
-export function displayProjects() {
+function displayProjects() {
     viewerPane.removeAttribute('class')
     viewerPane.classList.add('taskViewer', 'projectActive')
     console.log(viewerPane);
 }
 
-export function addNewItem() {
+function addNewItem() {
     overlay.classList.add('active')
     let modal = buildModal()
     modalDiv.innerHTML += modal
 }
 
-export function closeModal() {
+function closeModal() {
     overlay.classList.remove('active');
     const modal = q('#new-item-modal')
     modal.remove()
