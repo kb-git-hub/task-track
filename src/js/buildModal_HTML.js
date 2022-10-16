@@ -15,11 +15,15 @@ export const buildModal = () =>{
         </div>
         <div class="modalDueDate">
             <div>Due: </div>
-            <div> calendar</div>
+            <input type="date" name="" id="taskDueDate">
+        </div>
+        <div class="modalTitle">
+            <div>Title: </div>
+            <input type="text" id="modalItemTitle"  required>
         </div>
         <div class="modalDetails">
             <div>Details:</div>
-            <textarea name="modalDetails" id="modalDetails" cols="49" rows="8"></textarea>
+            <textarea name="modalDetails" id="modalDetailText" cols="49" rows="8"></textarea>
         </div>
         <button type="submit" id="modalSubmit" class="">Create</button>
     </div>

@@ -60,6 +60,14 @@ html,body{
     min-height: 100%;
 }
 
+input, textarea{
+    border: none;
+    outline: none;
+    background-color: var(--smokey);
+    border-radius: var(--border-radius-small);
+    font-family: inherit;
+}
+
 .btn {
     outline: var(--dev-outline);
     padding: var(--spacing-sm) var(--spacing-md);
