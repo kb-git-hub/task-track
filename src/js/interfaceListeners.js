@@ -8,16 +8,22 @@ const viewerPane = q('#task-viewer')
 const addItemBtn = q('#add-item-btn')
 const modalDiv = q('#modal-div')
 const overlay = q('#overlay')
+const selectorBtns = qA('.todoBtn')
+
 
 function displayTasks() {
     viewerPane.removeAttribute('class')
     viewerPane.classList.add('taskViewer', 'taskActive')
+    selectorBtns.forEach(btn => btn.classList.remove('active'))
+    showTasks.classList.add('active')
     console.log(viewerPane);
 }
 
 function displayProjects() {
     viewerPane.removeAttribute('class')
     viewerPane.classList.add('taskViewer', 'projectActive')
+    selectorBtns.forEach(btn => btn.classList.remove('active'))
+    showProjects.classList.add('active')
     console.log(viewerPane);
 }
 

@@ -6,10 +6,16 @@ import { compareAsc, format } from 'date-fns'
 import { q, qA, create } from "/src/js/utils";
 import { buildTaskCard, buildProjectCard, buildProjectTasks } from '/src/js/buildCards_HTML.js';
 import * as interfaceListeners from './js/interfaceListeners'
+import * as modalFunctions from './js/modal'
+import { buildModal } from './js/buildModal_HTML'
 
 
 
 console.log(format(new Date(2014, 1, 11), 'yyyy-MM-dd'))
+
+buildModal()
+
+
 
 
 

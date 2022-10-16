@@ -93,5 +93,6 @@
 
 .todoBtn:hover, .todoBtn.active{
     scale: 115%;
+    background-color: var(--vapor-red);
     box-shadow: var(--shadow-med);
 }

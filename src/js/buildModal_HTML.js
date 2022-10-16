@@ -4,7 +4,7 @@ export const buildModal = () =>{
     <div  id='new-item-modal' class="modal active">
         <div class="modalTitle">
             <div>Create new: </div>
-            <div class="newType active" id="typeTask">Task</div>
+            <div class="newType" id="typeTask">Task</div>
             <div class="newType" id="typeProject">Project</div>
         </div>
         <div class="modalPrioritySelector">
