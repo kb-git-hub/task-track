@@ -74,6 +74,24 @@
     outline: 2px solid var(--rain-blue);
 }
 
+.modalPriority.high{
+
+    background-color: var(--Priority-high-bg);
+    outline: var(--Priority-high);
+    color: whitesmoke;
+}
+.modalPriority.medium{
+    background-color: var(--Priority-med-bg);
+    outline: 2px solid var(--Priority-med);
+    
+}
+
+
+.modalPriority.low{
+    background-color: var(--Priority-low-bg);
+    outline: 2px solid var(--Priority-low);
+}
+
 .modalDetails{
     font-weight: 600;
     cursor: default;

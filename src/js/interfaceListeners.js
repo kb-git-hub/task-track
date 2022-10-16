@@ -1,4 +1,5 @@
 import { buildModal } from "./buildModal_HTML";
+import { buildModalEventListeners, getModaldata } from "./modal";
 import { q, qA, create } from "/src/js/utils";
 
 // Initialize interface variables
@@ -16,7 +17,6 @@ function displayTasks() {
     viewerPane.classList.add('taskViewer', 'taskActive')
     selectorBtns.forEach(btn => btn.classList.remove('active'))
     showTasks.classList.add('active')
-    console.log(viewerPane);
 }
 
 function displayProjects() {
@@ -24,13 +24,13 @@ function displayProjects() {
     viewerPane.classList.add('taskViewer', 'projectActive')
     selectorBtns.forEach(btn => btn.classList.remove('active'))
     showProjects.classList.add('active')
-    console.log(viewerPane);
 }
 
 function addNewItem() {
     overlay.classList.add('active')
     let modal = buildModal()
     modalDiv.innerHTML += modal
+    getModaldata()
 }
 
 function closeModal() {
