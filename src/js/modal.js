@@ -1,7 +1,8 @@
 import { Project } from "./projects";
-import { Task } from "./tasks";
+import { Task, TaskLibrary } from "./tasks";
 import { q, qA, create } from "/src/js/utils";
-
+import { taskList, projectList } from '/src/index.js';
+import { closeModal } from "./interfaceListeners";
 
 
 export const getModaldata = () => {
@@ -29,10 +30,16 @@ export const getModaldata = () => {
     modalSubmitNewItem.addEventListener('click', () => {
         if (newType === 'Task') {
             const newTask = createNewTask(newTitle, newPriorityType, newDueDate, newDetails)
+            taskList.addTask(newTask)
+            console.log('🌌 | file: modal.js | line 32 | modalSubmitNewItem.addEventListener | newTask', newTask)
+            
         }
         if(newType === 'Project'){
             const newProject = createNewProject(newTitle)
+            projectList.addtask(newProject)
+            console.log('🌌 | file: modal.js | line 38 | modalSubmitNewItem.addEventListener | newProject', newProject)
         }
+        closeModal()
     })
 
     function selectType(node, e) {

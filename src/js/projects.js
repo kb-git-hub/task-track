@@ -8,6 +8,11 @@ export class Project{
 
 }
 
+export class ProjectLibrary{
+    constructor(){
+        this.projects = []
+    }
+}
 
 
 

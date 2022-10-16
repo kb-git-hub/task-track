@@ -1,6 +1,8 @@
 import { buildModal } from "./buildModal_HTML";
 import { buildModalEventListeners, getModaldata } from "./modal";
+import { updateTaskDisplay } from "./tasks";
 import { q, qA, create } from "/src/js/utils";
+import {taskList} from '/src/index.js'
 
 // Initialize interface variables
 const showTasks = q('#show-tasks')
@@ -17,6 +19,7 @@ function displayTasks() {
     viewerPane.classList.add('taskViewer', 'taskActive')
     selectorBtns.forEach(btn => btn.classList.remove('active'))
     showTasks.classList.add('active')
+    updateTaskDisplay()
 }
 
 function displayProjects() {
@@ -33,7 +36,7 @@ function addNewItem() {
     getModaldata()
 }
 
-function closeModal() {
+export function closeModal() {
     overlay.classList.remove('active');
     const modal = q('#new-item-modal')
     modal.remove()

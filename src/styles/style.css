@@ -16,9 +16,9 @@
     --smokey: rgb(199, 199, 199);
     --dev-outline: 2px solid #20de8b;
 
-    --Priority-high: 2px solid #ff114f;
-    --Priority-med: 2px solid #dbff11;
-    --Priority-low: 2px solid #20de8b;
+    --Priority-High: 8px solid #ff114f;
+    --Priority-Medium: 8px solid #ffee00;
+    --Priority-Low: 8px solid #20de8b;
 
     --Priority-high-bg: #ff114f; 
     --Priority-med-bg: #dbff11; 

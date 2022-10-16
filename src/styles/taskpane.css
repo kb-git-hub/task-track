@@ -26,7 +26,6 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--black-smoke);
-    border-left: var(--Priority-high);
     padding: 0 var(--spacing-lg);
     border-radius: var(--border-radius-med);
     height: 60px;
@@ -40,7 +39,6 @@
     justify-content: space-between;
     align-items: center;
     gap: var(--spacing-lg);
-    /* outline: var(--dev-outline); */
 }
 
 .taskTitle{
@@ -50,18 +48,18 @@
 
 .taskDetails{
     border: none;
-    background-color: var(--rain-dark-blue);
-    color: var(--smokey) ;
+    color: var(--rain-dark-blue) ;
     height: 40px;
     cursor: pointer;
 }
 
 .taskEdit {
     border-radius: var(--border-radius-med);
-    border: 2px solid var(--vapor-red);
-    color: var(--rain-dark-blue);
+    border: 2px solid var(--rain-dark-blue);
+    color: var(--rain-blue);
     cursor: pointer;
     padding: var(--spacing-sm);
+    background-color: var(--rain-dark-blue);
 }
 
 .taskEdit:hover{

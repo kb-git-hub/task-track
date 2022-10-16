@@ -77,7 +77,7 @@
 .modalPriority.high{
 
     background-color: var(--Priority-high-bg);
-    outline: var(--Priority-high);
+    outline: 2px solid var(--Priority-high-bg);
     color: whitesmoke;
 }
 .modalPriority.medium{
