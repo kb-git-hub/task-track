@@ -4,7 +4,7 @@ import { buildTaskCard } from "./buildCards_HTML";
 import { q, qa, create } from "./utils";
 
 export class Task{
-    constructor(title ='New Task', priority = 'Low', dueDate, details){
+    constructor(title ='New Task', priority = 'Low', dueDate, details='No Details'){
         this.title = title,
         this.priority = priority,
         this.dueDate = dueDate,

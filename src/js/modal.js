@@ -3,6 +3,7 @@ import { Task, TaskLibrary } from "./tasks";
 import { q, qA, create } from "/src/js/utils";
 import { taskList, projectList } from '/src/index.js';
 import { closeModal } from "./interfaceListeners";
+import { compareAsc, format } from 'date-fns'
 
 
 export const getModaldata = () => {
@@ -23,7 +24,7 @@ export const getModaldata = () => {
     modalNewType.forEach(type => type.addEventListener('click', e => selectType(modalNewType, e)))
     modalPriority.forEach(type => type.addEventListener('click', e => selectPriority(modalPriority, e, newPriorityType)))
 
-    dueDate.addEventListener('change', e => newDueDate = e.currentTarget.value)
+    dueDate.addEventListener('change', e => newDueDate = format( new Date(e.currentTarget.value),'MMM. dd, yyyy'))
     modalDetails.addEventListener('change', e => newDetails = e.currentTarget.value)
     modalTitle.addEventListener('change', e => newTitle = e.currentTarget.value)
 

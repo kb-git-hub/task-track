@@ -4,7 +4,8 @@ export const buildTaskCard = (title, priority, dueDate, details) => {
     const detailDisplay = details =>{
         let charMax = 60
         return (details.length < charMax ? details : details.slice(0,charMax) + '...')
-    } 
+    
+}
     const card =
         `
     <div class="taskCard" style='border-left:var(--Priority-${priority})'>
