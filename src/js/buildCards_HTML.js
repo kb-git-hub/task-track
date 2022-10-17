@@ -1,9 +1,10 @@
 import { q } from "./utils"
 
 export const buildTaskCard = (title, priority, dueDate, details) => {
+    console.log('buildtask', details.length);
     const detailDisplay = details =>{
-        let charMax = 60
-        return (details.length < charMax ? details : details.slice(0,charMax) + '...')
+        const charMax = 35
+        return (details.length > charMax ?  details.slice(0,charMax) + '...': details)
     
 }
     const card =

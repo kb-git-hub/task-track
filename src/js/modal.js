@@ -32,7 +32,7 @@ export const getModaldata = () => {
         if (newType === 'Task') {
             const newTask = createNewTask(newTitle, newPriorityType, newDueDate, newDetails)
             taskList.addTask(newTask)
-            console.log('🌌 | file: modal.js | line 32 | modalSubmitNewItem.addEventListener | newTask', newTask)
+            console.log(newDetails.length);
             
         }
         if(newType === 'Project'){

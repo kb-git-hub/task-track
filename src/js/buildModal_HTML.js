@@ -19,7 +19,7 @@ export const buildModal = () =>{
         </div>
         <div class="modalTitle">
             <div>Title: </div>
-            <input type="text" id="modalItemTitle"  required>
+            <input type="text" id="modalItemTitle"  required='required'>
         </div>
         <div class="modalDetails">
             <div>Details:</div>
