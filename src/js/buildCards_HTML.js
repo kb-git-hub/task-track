@@ -2,7 +2,7 @@ import { q } from "./utils"
 
 export const buildTaskCard = (title, priority, dueDate, details, project) => {
    
-    const detailDisplay = (details, length) => {
+    const detailDisplay = (details = 0, length) => {
         const charMax = length
         return (details.length > charMax ? details.slice(0, charMax) + '...' : details)
     }
