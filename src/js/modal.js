@@ -28,7 +28,7 @@ export const getModaldata = () => {
         modalNewType.forEach(type => type.addEventListener('click', e => selectType(modalNewType, e)))
         modalPriority.forEach(type => type.addEventListener('click', e => selectPriority(modalPriority, e, newPriorityType)))
         
-        dueDate.addEventListener('change', e => newDueDate = format( new Date(e.currentTarget.value),'MMM. dd, yyyy'))
+        dueDate.addEventListener('change', e => newDueDate = format( new Date(e.currentTarget.value),'MMM. dd, yy'))
         modalDetails.addEventListener('change', e => newDetails = e.currentTarget.value)
         modalTitle.addEventListener('change', e => newTitle = e.currentTarget.value)
         modalProjectItem.addEventListener('change', e => associatedProject = e.currentTarget.value)

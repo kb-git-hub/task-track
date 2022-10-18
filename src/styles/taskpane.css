@@ -46,7 +46,6 @@
     border: none;
     width: 160px;
     cursor: default;
-    overflow: -moz-hidden-unscrollable;
 }
 
 .taskDetails{
