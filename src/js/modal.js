@@ -1,8 +1,7 @@
-import { Project } from "./projects";
-import { Task, TaskLibrary } from "./tasks";
+import { Project, projectList, updateProjectDisplay } from "./projects";
+import { Task, TaskLibrary, taskList, updateTaskDisplay } from "./tasks";
 import { q, qA, create } from "/src/js/utils";
-import { taskList, projectList } from '/src/index.js';
-import { closeModal } from "./interfaceListeners";
+import { closeModal, displayProjects, displayTasks } from "./interfaceListeners";
 import { compareAsc, format } from 'date-fns'
 
 
@@ -16,12 +15,10 @@ export const getModaldata = () => {
     const modalSubmitNewItem = q('#modalSubmit')
     const modalProjectItem = q('#modalProject')
 
-
-
     let newType,
         newTitle,
         newPriorityType,
-        associatedProject = modalProjectItem.value,
+        associatedProject,
         newDueDate,
         newDetails
         
@@ -38,16 +35,15 @@ export const getModaldata = () => {
         if (newType === 'Task') {
             const newTask = createNewTask(newTitle, newPriorityType, newDueDate, newDetails, associatedProject)
             taskList.addTask(newTask)
-            
+            displayTasks()            
         }
         if(newType === 'Project'){
             const newProject = createNewProject(newTitle)
             projectList.addProject(newProject)
+            displayProjects()
         }
         closeModal()
     })
-
-
 
 
 

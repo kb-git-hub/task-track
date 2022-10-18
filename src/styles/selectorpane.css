@@ -39,6 +39,10 @@
     border-radius: var(--border-radius-small);
 }
 
+.logoLetter:hover{
+    background-color: var(--vapor-red);
+}
+
 .logoIcon{
     padding-top: var(--spacing-sm);
     padding-right: var(--spacing-xl);   
@@ -49,6 +53,9 @@
     font-size: 70px;
 }
 
+.logoPad:hover{
+    color: var(--vapor-red);
+}
 
 /* todos */
 .todoPane{

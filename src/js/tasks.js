@@ -1,5 +1,4 @@
 
-import { taskList } from "..";
 import { buildTaskCard } from "./buildCards_HTML";
 import { q, qa, create } from "./utils";
 
@@ -40,7 +39,8 @@ export function updateTaskDisplay() {
 }
 
 
-
+// initialize task Library
+export const taskList = new TaskLibrary
 
 
 

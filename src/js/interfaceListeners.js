@@ -15,7 +15,7 @@ const overlay = q('#overlay')
 const selectorBtns = qA('.todoBtn')
 
 
-function displayTasks() {
+export function displayTasks() {
     viewerPane.removeAttribute('class')
     viewerPane.classList.add('taskViewer', 'taskActive')
     selectorBtns.forEach(btn => btn.classList.remove('active'))
@@ -23,7 +23,7 @@ function displayTasks() {
     updateTaskDisplay()
 }
 
-function displayProjects() {
+export function displayProjects() {
     viewerPane.removeAttribute('class')
     viewerPane.classList.add('taskViewer', 'projectActive')
     selectorBtns.forEach(btn => btn.classList.remove('active'))

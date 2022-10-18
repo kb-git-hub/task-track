@@ -131,6 +131,10 @@
     background-color: var(--vapor-red);
 }
 
+#modalDetailText{
+    width: 380px;
+    height: 100px;
+}
 textarea {
     resize: none;
 }
