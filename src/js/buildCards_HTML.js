@@ -1,12 +1,14 @@
 import { q } from "./utils"
 
-export const buildTaskCard = (title, priority, dueDate, details) => {
-    console.log('buildtask', details.length);
-    const detailDisplay = details =>{
-        const charMax = 35
-        return (details.length > charMax ?  details.slice(0,charMax) + '...': details)
-    
-}
+export const buildTaskCard = (title, priority, dueDate, details, project) => {
+   
+    const detailDisplay = (details, length) => {
+        const charMax = length
+        return (details.length > charMax ? details.slice(0, charMax) + '...' : details)
+    }
+   
+ 
+
     const card =
         `
     <div class="taskCard" style='border-left:var(--Priority-${priority})'>
@@ -14,11 +16,12 @@ export const buildTaskCard = (title, priority, dueDate, details) => {
             <div class="checkbox">
                 <input type="checkbox" id="taskCheckbox" name="source">
             </div>
-            <div class="taskCard taskTitle">${title}</div>
-            <div class="taskCard taskDetails">${detailDisplay(details)}</div>
+            <div class="taskTitle">${detailDisplay(title, 10)}</div>
+            <div class="taskDetails">${detailDisplay(details, 30)}</div>
         </div>
         <div class="taskContent">
-            <div class="taskCardDate">${dueDate}</div>
+            <div class="taskCardContent">${detailDisplay(project, 8)}</div>
+            <div class="taskCardContent">${dueDate}</div>
             <span class="material-symbols-outlined taskEdit ">
                 edit
             </span>
@@ -28,11 +31,17 @@ export const buildTaskCard = (title, priority, dueDate, details) => {
     return card
 }
 
-export const buildProjectCard = () => {
+
+
+export const buildProjectCard = (title) => {
+    const titleDisplay = title => {
+        const charMax = 9
+        return (title.length > charMax ? title.slice(0, charMax) + '...' : title)
+    }
     const project =
         `
     <div class="projectCard">
-        <div class="projectTitle">Programming</div>
+        <div class="projectTitle">${titleDisplay(title)}</div>
             <div class="projectTaskPane"></div>
         </div>
     </div>

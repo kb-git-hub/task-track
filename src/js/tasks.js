@@ -8,11 +8,13 @@ export class Task {
         title = 'New Task',
         priority = 'Low',
         dueDate = 'No Due Date',
-        details = 'No Details') {
+        details = 'No Details',
+        project) {
             this.title = title,
             this.priority = priority,
             this.dueDate = dueDate,
             this.details = details
+            this.project = project
     }
 }
 
@@ -32,7 +34,7 @@ export function updateTaskDisplay() {
     q('#task-viewer').innerHTML = ''
 
     for (let task of taskList.tasks) {
-        const newTaskCard = buildTaskCard(task.title, task.priority, task.dueDate, task.details)
+        const newTaskCard = buildTaskCard(task.title, task.priority, task.dueDate, task.details, task.project)
         q('#task-viewer').innerHTML += newTaskCard
     }
 }

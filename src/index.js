@@ -15,7 +15,8 @@ import { ProjectLibrary } from './js/projects'
 
 export const taskList = new TaskLibrary
 export const projectList = new ProjectLibrary
+console.log('🌌 | file: index.js | line 18 | projectList', projectList)
 
-const testTask = new Task('test Title', 'Medium', '2012-10-13', 'Here are some details Here are some more awwesome details even more details hello')
+const testTask = new Task('wwwwwwwwwwwwwwwww', 'Medium', '2012-10-13', 'mwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwore details hello', 'wwwwwwwwwwwwwwwwww')
 taskList.addTask(testTask)
 

@@ -40,6 +40,7 @@
     gap: var(--spacing-md);
     align-items: center;
     font-weight: 600;
+    height: 25px;
 }
 
 .newType {
@@ -96,11 +97,25 @@
     font-weight: 600;
     cursor: default;
 }
+
 .modalDueDate{
     cursor: default;
     display: flex;
     gap: var(--spacing-md);
     font-weight: 600;
+    height: 25px;
+}
+
+.modalProject{
+    cursor: default;
+    display: flex;
+    gap: var(--spacing-md);
+    font-weight: 600;
+    height: 25px;
+}
+
+#modalItemTitle{
+    height: 25px;
 }
 
 #modalSubmit{

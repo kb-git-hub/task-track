@@ -3,6 +3,7 @@ import { buildModalEventListeners, getModaldata } from "./modal";
 import { updateTaskDisplay } from "./tasks";
 import { q, qA, create } from "/src/js/utils";
 import {taskList} from '/src/index.js'
+import { updateProjectDisplay } from "./projects";
 
 // Initialize interface variables
 const showTasks = q('#show-tasks')
@@ -27,6 +28,7 @@ function displayProjects() {
     viewerPane.classList.add('taskViewer', 'projectActive')
     selectorBtns.forEach(btn => btn.classList.remove('active'))
     showProjects.classList.add('active')
+    updateProjectDisplay()
 }
 
 function addNewItem() {

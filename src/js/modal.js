@@ -14,35 +14,46 @@ export const getModaldata = () => {
     const dueDate = q('#taskDueDate')
     const modalDetails = q('#modalDetailText')
     const modalSubmitNewItem = q('#modalSubmit')
+    const modalProjectItem = q('#modalProject')
+
+
 
     let newType,
         newTitle,
         newPriorityType,
+        associatedProject = modalProjectItem.value,
         newDueDate,
         newDetails
-
-    modalNewType.forEach(type => type.addEventListener('click', e => selectType(modalNewType, e)))
-    modalPriority.forEach(type => type.addEventListener('click', e => selectPriority(modalPriority, e, newPriorityType)))
-
-    dueDate.addEventListener('change', e => newDueDate = format( new Date(e.currentTarget.value),'MMM. dd, yyyy'))
-    modalDetails.addEventListener('change', e => newDetails = e.currentTarget.value)
-    modalTitle.addEventListener('change', e => newTitle = e.currentTarget.value)
-
-    modalSubmitNewItem.addEventListener('click', () => {
+        
+        modalNewType.forEach(type => type.addEventListener('click', e => selectType(modalNewType, e)))
+        modalPriority.forEach(type => type.addEventListener('click', e => selectPriority(modalPriority, e, newPriorityType)))
+        
+        dueDate.addEventListener('change', e => newDueDate = format( new Date(e.currentTarget.value),'MMM. dd, yyyy'))
+        modalDetails.addEventListener('change', e => newDetails = e.currentTarget.value)
+        modalTitle.addEventListener('change', e => newTitle = e.currentTarget.value)
+        modalProjectItem.addEventListener('change', e => associatedProject = e.currentTarget.value)
+        
+        modalSubmitNewItem.addEventListener('click', () => {
+        console.log('🌌 | file: modal.js | line 25 | getModaldata | associatedProject', associatedProject)
         if (newType === 'Task') {
-            const newTask = createNewTask(newTitle, newPriorityType, newDueDate, newDetails)
+            const newTask = createNewTask(newTitle, newPriorityType, newDueDate, newDetails, associatedProject)
             taskList.addTask(newTask)
-            console.log(newDetails.length);
             
         }
         if(newType === 'Project'){
             const newProject = createNewProject(newTitle)
-            projectList.addtask(newProject)
-            console.log('🌌 | file: modal.js | line 38 | modalSubmitNewItem.addEventListener | newProject', newProject)
+            projectList.addProject(newProject)
         }
         closeModal()
     })
 
+
+
+
+
+
+
+    // Select Type and Prio
     function selectType(node, e) {
         node.forEach(type => {
             type.classList.remove('active')
@@ -52,9 +63,11 @@ export const getModaldata = () => {
             q('.modalPrioritySelector').style.display = `none`
             q('.modalDueDate').style.display = `none`
             q('.modalDetails').style.display = `none`
+            q('.modalProject').style.display = `none`
         } else {
             q('.modalPrioritySelector').style.display = `flex`
             q('.modalDueDate').style.display = `flex`
+            q('.modalProject').style.display = `flex`
             q('.modalDetails').style.display = `block`
         }
         newType = e.currentTarget.textContent
@@ -72,8 +85,8 @@ export const getModaldata = () => {
     }  
 }
 
-function createNewTask(title, priority, dueDate, details) {
-    return new Task(title, priority, dueDate, details)
+function createNewTask(title, priority, dueDate, details, project) {
+    return new Task(title, priority, dueDate, details, project)
 }
 
 function createNewProject(title) {

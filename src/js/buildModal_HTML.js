@@ -21,6 +21,11 @@ export const buildModal = () =>{
             <div>Title: </div>
             <input type="text" id="modalItemTitle"  required='required'>
         </div>
+
+        <div class="modalProject">
+            <div>Project: </div>
+            <input type="text" id="modalProject" >
+        </div>
         <div class="modalDetails">
             <div>Details:</div>
             <textarea name="modalDetails" id="modalDetailText" cols="49" rows="8"></textarea>
