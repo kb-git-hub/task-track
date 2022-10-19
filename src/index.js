@@ -15,5 +15,5 @@ import { ProjectLibrary, projectList } from './js/projects'
 
 
 
-const testTask = new Task('wwwwwwwwwwwwwwwww', 'Medium',format(new Date(2022-12-10),'MMM. dd, yy'), 'mwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwore details hello', 'wwwwwwwwwwwwwwwwww')
+const testTask = new Task('Task Title', 'Medium',format(new Date(2022-12-10),'MMM. dd, yy'), 'Task Details here', 'associated project')
 taskList.addTask(testTask)

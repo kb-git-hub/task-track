@@ -17,12 +17,12 @@ export const buildTaskCard = (title, priority, dueDate, details, project) => {
                 <input type="checkbox" id="taskCheckbox" name="source">
             </div>
             <div class="taskTitle">${detailDisplay(title, 10)}</div>
-            <div class="taskDetails">${detailDisplay(details, 30)}</div>
+            <div class="taskDetails">${detailDisplay(details, 25)}</div>
         </div>
         <div class="taskContent">
-            <div class="taskCardContent">${detailDisplay(project, 8)}</div>
-            <div class="taskCardContent">${dueDate}</div>
-            <span class="material-symbols-outlined taskEdit ">
+            <div class="taskCardContent" id="task-assoc-project">${detailDisplay(project, 10)}</div>
+            <div class="taskCardContent" id="task-due-date">${dueDate}</div>
+            <span class="material-symbols-outlined taskEdit " id="task-edit">
                 edit
             </span>
         </div>
@@ -36,7 +36,7 @@ export const buildTaskCard = (title, priority, dueDate, details, project) => {
 export const buildProjectCard = (title) => {
     const titleDisplay = title => {
         const charMax = 9
-        return (title.length > charMax ? title.slice(0, charMax) + '...' : title)
+        return (title.length > charMax ? title.slice(0, charMax) + "..." : title)
     }
     const project =
         `
@@ -61,3 +61,4 @@ export const buildProjectTasks = () => {
     `
     return projectTasks
 }
+

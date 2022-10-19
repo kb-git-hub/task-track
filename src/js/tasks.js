@@ -1,6 +1,10 @@
 
 import { buildTaskCard } from "./buildCards_HTML";
-import { q, qa, create } from "./utils";
+import { modalDiv } from "./interfaceListeners";
+import { q, qA, create } from "./utils";
+import { buildModal, editModal } from "./buildModal_HTML";
+import { editModaldata } from "./modal";
+
 
 export class Task {
     constructor(
@@ -8,13 +12,18 @@ export class Task {
         priority = 'Low',
         dueDate = 'No Due Date',
         details = 'No Details',
-        project) {
-            this.title = title,
+        project = '') {
+        this.title = title,
             this.priority = priority,
             this.dueDate = dueDate,
             this.details = details
-            this.project = project
+        this.project = project
     }
+
+    editTask = () => {
+        return null
+    }
+
 }
 
 export class TaskLibrary {
@@ -36,6 +45,18 @@ export function updateTaskDisplay() {
         const newTaskCard = buildTaskCard(task.title, task.priority, task.dueDate, task.details, task.project)
         q('#task-viewer').innerHTML += newTaskCard
     }
+    
+    qA('#task-edit').forEach(task =>{(task.addEventListener('click', editTask))})
+}
+
+
+function editTask(e){
+    console.log(e.currentTarget.closest('.taskCard'));
+    overlay.classList.add('active')
+    let modal = editModal()
+    modalDiv.innerHTML += modal
+    editModaldata()
+
 }
 
 
